@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENIM — Безопасные сделки в Казахстане</title>
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       const METRIKA_ID = '00000000'; 
+
+       if (METRIKA_ID !== '00000000') {
+           ym(METRIKA_ID, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+           });
+       }
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/00000000" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-cream: #F9F7F2;
+            --text-dark: #1A1A1A;
+            --accent-blue: #2563eb;
+            --border-soft: #E8E4D9;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-soft);
+        }
+        .btn-black {
+            background: #000;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-black:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.7s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .phone-mockup {
+            width: 320px;
+            height: 640px;
+            background: #000;
+            border-radius: 44px;
+            padding: 12px;
+            box-shadow: 0 50px 100px -20px rgba(0,0,0,0.3);
+            position: relative;
+            margin: 0 auto;
+        }
+        .phone-inner {
+            background: var(--bg-cream);
+            width: 100%;
+            height: 100%;
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .app-button {
+            background: #000;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .app-button:hover {
+            transform: scale(1.05);
+            background: #111;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E8E4D9]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter italic text-gray-900">SENIM</div>
+            <div class="hidden lg:flex gap-10 text-[10px] font-bold uppercase tracking-widest text-gray-500">
+                <a href="#story" class="hover:text-blue-600 transition">О нас</a>
+                <a href="#features" class="hover:text-blue-600 transition">Безопасность</a>
+                <a href="#how" class="hover:text-blue-600 transition">Как это работает</a>
+                <a href="#data" class="hover:text-blue-600 transition">Статистика</a>
+            </div>
+            <a href="#feedback" class="btn-black px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest">Защитить сделку</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-48 pb-24 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2 text-left">
+                <div class="fade-in mb-8 inline-flex items-center gap-2 bg-white border border-[#E8E4D9] px-4 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Гарант №1 в Казахстане</span>
+                </div>
+                <h1 class="fade-in text-5xl md:text-7xl font-black mb-8 leading-[1.05] tracking-tighter italic uppercase">
+                    Ваши деньги <br><span class="text-blue-600">в безопасности.</span>
+                </h1>
+                <p class="fade-in text-lg text-gray-500 mb-10 max-w-xl leading-relaxed">
+                    SENIM — это независимый сервис защиты сделок. Мы замораживаем оплату до тех пор, пока вы не получите и не проверите товар. Честно. Просто. Надежно.
+                </p>
+                
+                <div class="fade-in flex flex-wrap gap-4 mb-10">
+                    <a href="#" class="app-button">
+                        <i class="fab fa-apple text-3xl"></i>
+                        <div class="text-left">
+                            <p class="text-[9px] uppercase font-bold leading-none opacity-60">App Store</p>
+                            <p class="text-lg font-bold">Скачать</p>
+                        </div>
+                    </a>
+                    <a href="#" class="app-button">
+                        <i class="fab fa-google-play text-2xl"></i>
+                        <div class="text-left">
+                            <p class="text-[9px] uppercase font-bold leading-none opacity-60">Google Play</p>
+                            <p class="text-lg font-bold">Скачать</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Interface Mockup -->
+            <div class="lg:w-1/2 fade-in">
+                <div class="phone-mockup">
+                    <!-- Dynamic Island / Notch -->
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full z-20"></div>
+                    
+                    <div class="phone-inner">
+                        <!-- App Header -->
+                        <div class="p-6 pt-10 bg-white border-b border-[#E8E4D9]">
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="text-xl font-black italic">SENIM</div>
+                                <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-xs text-gray-400"></i>
+                                </div>
+                            </div>
+                            <div class="bg-blue-600 p-4 rounded-2xl text-white">
+                                <p class="text-[10px] uppercase font-bold opacity-70 mb-1">Ваш баланс</p>
+                                <p class="text-2xl font-black">450 000 ₸</p>
+                            </div>
+                        </div>
+
+                        <!-- App Content -->
+                        <div class="p-4 space-y-4 overflow-y-auto">
+                            <p class="text-[10px] font-bold uppercase text-gray-400 tracking-widest px-2">Активные сделки</p>
+                            
+                            <!-- Deal Card 1 -->
+                            <div class="bg-white p-4 rounded-2xl border border-[#E8E4D9] shadow-sm">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <p class="font-bold text-sm">iPhone 15 Pro Max</p>
+                                        <p class="text-[10px] text-gray-400">Продавец: Арман С.</p>
+                                    </div>
+                                    <span class="text-[9px] font-bold px-2 py-1 bg-blue-50 text-blue-600 rounded-full">В ПУТИ</span>
+                                </div>
+                                <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-blue-600 w-2/3 h-full"></div>
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <p class="text-xs font-black">580 000 ₸</p>
+                                    <p class="text-[10px] text-gray-400">Защищено SENIM</p>
+                                </div>
+                            </div>
+
+                            <!-- Deal Card 2 -->
+                            <div class="bg-white p-4 rounded-2xl border border-[#E8E4D9] shadow-sm opacity-60">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <p class="font-bold text-sm">MacBook Air M2</p>
+                                        <p class="text-[10px] text-gray-400">Сделка завершена</p>
+                                    </div>
+                                    <i class="fas fa-check-circle text-green-500"></i>
+                                </div>
+                            </div>
+
+                            <button class="w-full py-4 bg-black text-white rounded-2xl font-bold text-xs uppercase tracking-widest">
+                                Создать новую сделку
+                            </button>
+                        </div>
+
+                        <!-- App Navigation -->
+                        <div class="mt-auto bg-white border-t border-[#E8E4D9] p-4 flex justify-around items-center">
+                            <i class="fas fa-home text-blue-600"></i>
+                            <i class="fas fa-exchange-alt text-gray-300"></i>
+                            <i class="fas fa-shield-alt text-gray-300"></i>
+                            <i class="fas fa-cog text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="py-24 px-6 bg-[#1A1A1A] text-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="fade-in">
+                <h2 class="text-4xl font-black mb-8 italic uppercase text-blue-500">Почему выбирают нас?</h2>
+                <div class="space-y-6 text-gray-400 leading-relaxed text-lg">
+                    <p>Ежедневно в Казахстане совершаются тысячи покупок через соцсети и доски объявлений. Но риск перевести деньги «в никуда» остается высоким.</p>
+                    <p>SENIM — это ваша страховка. Мы создали платформу, где покупатель уверен в возврате средств, а продавец — в серьезности намерений клиента.</p>
+                    <p>Мы работаем под юрисдикцией МФЦА, используя современные технологии эскроу-счетов для полной прозрачности каждого тенге.</p>
+                </div>
+            </div>
+            <div class="fade-in grid grid-cols-2 gap-6">
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <span class="block text-4xl font-black mb-2 text-white italic">100%</span>
+                    <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Гарантия возврата</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <span class="block text-4xl font-black mb-2 text-white italic">0 ₸</span>
+                    <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Скрытых комиссий</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <span class="block text-4xl font-black mb-2 text-white italic">24/7</span>
+                    <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Служба заботы</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <span class="block text-4xl font-black mb-2 text-white italic">20к+</span>
+                    <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Активных пользователей</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data & Statistics -->
+    <section id="data" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-black italic uppercase tracking-tighter mb-4">Безопасность в цифрах</h2>
+                <p class="text-gray-500">Как мы меняем рынок электронной коммерции Казахстана</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="fade-in bg-white border border-[#E8E4D9] p-10 rounded-[3rem] text-center">
+                    <h3 class="text-5xl font-black italic mb-2">99.9%</h3>
+                    <p class="text-sm font-bold uppercase text-gray-400">Безопасных транзакций</p>
+                </div>
+                <div class="fade-in bg-white border border-[#E8E4D9] p-10 rounded-[3rem] text-center">
+                    <h3 class="text-5xl font-black italic mb-2">~15 мин</h3>
+                    <p class="text-sm font-bold uppercase text-gray-400">Среднее время проверки</p>
+                </div>
+                <div class="fade-in bg-white border border-[#E8E4D9] p-10 rounded-[3rem] text-center">
+                    <h3 class="text-5xl font-black italic mb-2">450 млн</h3>
+                    <p class="text-sm font-bold uppercase text-gray-400">Тенге в защите прямо сейчас</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section id="feedback" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto glass-card rounded-[4rem] p-12 md:p-20 relative overflow-hidden">
+            <div class="grid lg:grid-cols-2 gap-16 relative z-10">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-black mb-8 italic uppercase leading-tight">Готовы к первой <br><span class="text-blue-600">безопасной сделке?</span></h2>
+                    <p class="text-gray-500 mb-10 text-lg">Оставьте контакты, и наш специалист поможет вам настроить ваш первый эскроу-платеж.</p>
+                </div>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Имя" class="w-full bg-white border border-[#E8E4D9] p-5 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-blue-100 transition" required>
+                        <input type="tel" placeholder="+7 (___) ___ __ __" class="w-full bg-white border border-[#E8E4D9] p-5 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-blue-100 transition" required>
+                    </div>
+                    <textarea rows="4" placeholder="Что вы планируете купить или продать?" class="w-full bg-white border border-[#E8E4D9] p-5 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-blue-100 transition"></textarea>
+                    <button type="submit" class="btn-black w-full py-6 rounded-2xl font-black text-xl italic uppercase tracking-widest">Проконсультироваться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 bg-white border-t border-[#E8E4D9]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+                <div class="text-2xl font-black italic">SENIM</div>
+                <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                    <a href="#">Оферта</a>
+                    <a href="#">Лицензия</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <div class="flex gap-4 text-gray-400">
+                    <i class="fab fa-instagram text-xl"></i>
+                    <i class="fab fa-telegram text-xl"></i>
+                </div>
+            </div>
+            <div class="mt-12 pt-12 border-t border-gray-50 text-center">
+                <p class="text-[9px] font-bold text-gray-300 uppercase tracking-[0.2em]">© 2026 SENIM TECH. SAFE PAYMENTS IN KAZAKHSTAN.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
